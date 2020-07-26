@@ -618,6 +618,7 @@ aside{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 4px 4px 7px 9px rgba(0, 0, 0, 0.3);
 }
 .as-img i{
     opacity: 0.5;
@@ -627,6 +628,7 @@ aside{
 }
 .as-title{
     font-family: sans-serif;
+    text-align: center;
 }
 .as-name{
     color: honeydew;
@@ -699,8 +701,23 @@ footer{
 	height: 55px;
 	width: 55px;
 	background-size: cover;
-	box-shadow: 0 0 5px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    animation: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 .audio-names{
 	margin-left: 10px;
 }
